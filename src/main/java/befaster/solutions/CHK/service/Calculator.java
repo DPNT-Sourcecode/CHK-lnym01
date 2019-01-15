@@ -10,7 +10,7 @@ public class Calculator {
 
     public Map<String, Integer> getItemCodeTotals(final List<String> splitSkus) {
 
-        Map<String, Integer> skuQuantityTotals = new HashMap();
+        Map<String, Integer> skuQuantityTotals = new HashMap<>();
 
         int a = 0;
         int b = 0;
@@ -71,4 +71,5 @@ public class Calculator {
 
 
 }
+
 

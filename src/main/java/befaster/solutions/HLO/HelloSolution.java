@@ -8,5 +8,3 @@ public class HelloSolution {
         return HELLO + friendName;
     }
 }
-
-

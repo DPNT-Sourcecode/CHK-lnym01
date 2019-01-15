@@ -19,14 +19,15 @@ public class HelloSolutionTest {
     public void hello_outputs_string(){
 
         //given:
-        String input = "Hello Simon";
+        String input = "Simon";
 
         //when:
         String result = subject.hello(input);
 
         //then:
-        assertThat(result, is(input));
+        assertThat(result, is("Hello " + input));
 
     }
 }
+
 

@@ -25,9 +25,12 @@ public class SkuValidator {
             }
             // only last character should be a letter
             char lastChar = sku.charAt(sku.length()-1);
-            if(){
-
+            if(lastChar < 'A' || lastChar > 'Z'){
+                return false;
             }
+            String skuQuantifier = StringUtils.substring(sku, 0, sku.length());
+            if(StringUtils.is)
+
             // last letter should be an ItemCode
         }
 
@@ -37,6 +40,7 @@ public class SkuValidator {
 
 
 }
+
 
 
 

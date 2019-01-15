@@ -16,7 +16,7 @@ public class SkuValidator {
 
     public Boolean validate(List<String> input ){
 
-        Pattern.com
+        skuPattern.
 
         if(CollectionUtils.isEmpty(input)){
             // shouldn't happen...
@@ -25,7 +25,7 @@ public class SkuValidator {
 
         for(String sku: input) {
 
-            
+
 
 //            // is letters and numbers only
 //            if(! StringUtils.isAlphanumeric(sku)){
@@ -48,3 +48,4 @@ public class SkuValidator {
 
 
 }
+

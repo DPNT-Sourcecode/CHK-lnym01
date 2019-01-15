@@ -4,19 +4,16 @@ import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.regex.Pattern;
 
 public class SkuValidator {
 
     Pattern skuPattern = Pattern.compile("\\d+[ABCD]{1}");
 
-    private enum ItemCode {
-        A, B, C, D
-    }
-
     public Boolean validate(List<String> input ){
 
-        skuPattern.
+         Predicate<String> validSku = skuPattern.asPredicate();
 
         if(CollectionUtils.isEmpty(input)){
             // shouldn't happen...
@@ -24,28 +21,12 @@ public class SkuValidator {
         }
 
         for(String sku: input) {
-
-
-
-//            // is letters and numbers only
-//            if(! StringUtils.isAlphanumeric(sku)){
-//                return false;
-//            }
-//            // only last character should be a letter
-//            char lastChar = sku.charAt(sku.length()-1);
-//            if(lastChar < 'A' || lastChar > 'Z'){
-//                return false;
-//            }
-//            String skuQuantifier = StringUtils.substring(sku, 0, sku.length());
-//            if(StringUtils.is)
-//
-//            // last letter should be an ItemCode
+            if (validSku.negate().test(sku)) {
+                return false;
+            }
         }
-
-
-        return null;   //TODO
+        return true;
     }
-
-
 }
+
 

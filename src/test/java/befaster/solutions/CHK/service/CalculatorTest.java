@@ -32,12 +32,13 @@ public class CalculatorTest {
     public void value_of_returns_correct_value_with_offer(){
 
         // given:
-        String input = "3A";
+        String input = "5A";
 
         // when:
         int result = subject.valueOf(input);
 
         // then:
-        assertThat(result,is(130));
+        assertThat(result,is(230));
     }
 }
+

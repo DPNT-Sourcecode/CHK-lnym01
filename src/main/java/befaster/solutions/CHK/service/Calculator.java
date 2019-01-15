@@ -9,9 +9,19 @@ public class Calculator {
         int quantifier = Integer.parseInt(StringUtils.substringBefore(sku, itemCode));
 
         switch(itemCode){
-            "A": 
+            case "A":
+                return ((quantifier/3)*130) + ((quantifier %3) *50);
+            case "B":
+                return ((quantifier/2)*45) + ((quantifier%2)*30);
+            case "C":
+                return quantifier * 20;
+            case "D":
+                return quantifier * 15;
+            default:
+                // should never happen
+                return -1;
         }
 
-        return 0;   // todo
     }
 }
+

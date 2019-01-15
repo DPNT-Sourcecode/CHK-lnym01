@@ -1,7 +1,6 @@
 package befaster.solutions.CHK.validator;
 
 import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
 import java.util.function.Predicate;
@@ -28,5 +27,6 @@ public class SkuValidator {
         return true;
     }
 }
+
 
 

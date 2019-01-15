@@ -19,19 +19,7 @@ public class SkuValidatorTest {
     }
 
     @Test
-    public void invalid_item_code_returns_false(){
-        // given:
-        List<String> input = Arrays.asList("1A", "2J");
-
-        // when:
-        boolean result = subject.validate(input);
-
-        // then:
-        assertThat(result, is(false));
-    }
-
-    @Test
-    public void non_alphanumeric_sku_returns_false(){
+    public void invalid_input_returns_false(){
         // given:
         List<String> input = Arrays.asList("1A", "3%");
 
@@ -54,3 +42,4 @@ public class SkuValidatorTest {
         assertThat(result, is(true));
     }
 }
+

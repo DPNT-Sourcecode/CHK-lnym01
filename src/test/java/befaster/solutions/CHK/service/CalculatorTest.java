@@ -51,5 +51,3 @@ public class CalculatorTest {
         assertThat(result, is(295));
     }
 }
-
-

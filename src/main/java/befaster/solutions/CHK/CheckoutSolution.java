@@ -22,7 +22,7 @@ public class CheckoutSolution {
             return 0;
         }
 
-        String significantChar = skus.substring(0,1).toUpperCase();
+
 
         if(significantChar.equals("A")){
             return 50;
@@ -51,6 +51,7 @@ public class CheckoutSolution {
 //        return calculator.checkout(itemTotals);
     }
 }
+
 
 
 

@@ -27,31 +27,9 @@ public class CheckoutSolutionTest {
         assertThat(result, is(-1));
     }
     @Test
-    public void blank_input_returns_zero(){
+    public void null_input_returns_minus_one(){
         // given:
-        String input = "";
-
-        // when:
-        Integer result = subject.checkout(input);
-
-        // then:
-        assertThat(result, is(0));
-    }
-    @Test
-    public void correct_leading_item_code_returns_expected_value(){
-        // given:
-        String input = "Axc";
-
-        // when:
-        Integer result = subject.checkout(input);
-
-        // then:
-        assertThat(result, is(50));
-    }
-    @Test
-    public void incorrect_leading_item_code_returns_minus_one(){
-        // given:
-        String input = "-";
+        String input = null;
 
         // when:
         Integer result = subject.checkout(input);
@@ -111,4 +89,5 @@ public class CheckoutSolutionTest {
 //        assertThat(result, is(295));
 //    }
 }
+
 

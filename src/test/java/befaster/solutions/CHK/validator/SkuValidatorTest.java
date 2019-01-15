@@ -9,36 +9,38 @@ import java.util.List;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
+@Deprecated
 public class SkuValidatorTest {
-
-    private SkuValidator subject;
-
-    @Before
-    public void setup(){
-        subject = new SkuValidator();
-    }
-
-    @Test
-    public void invalid_input_returns_false(){
-        // given:
-        List<String> input = Arrays.asList("1A", "3%");
-
-        // when:
-        boolean result = subject.validate(input);
-
-        // then:
-        assertThat(result, is(false));
-    }
-
-    @Test
-    public void valid_input_returns_true(){
-        // given:
-        List<String> input = Arrays.asList("1A", "D", "2B");
-
-        // when:
-        boolean result = subject.validate(input);
-
-        // then:
-        assertThat(result, is(true));
-    }
+//
+//    private SkuValidator subject;
+//
+//    @Before
+//    public void setup(){
+//        subject = new SkuValidator();
+//    }
+//
+//    @Test
+//    public void invalid_input_returns_false(){
+//        // given:
+//        List<String> input = Arrays.asList("1A", "3%");
+//
+//        // when:
+//        boolean result = subject.validate(input);
+//
+//        // then:
+//        assertThat(result, is(false));
+//    }
+//
+//    @Test
+//    public void valid_input_returns_true(){
+//        // given:
+//        List<String> input = Arrays.asList("1A", "D", "2B");
+//
+//        // when:
+//        boolean result = subject.validate(input);
+//
+//        // then:
+//        assertThat(result, is(true));
+//    }
 }
+

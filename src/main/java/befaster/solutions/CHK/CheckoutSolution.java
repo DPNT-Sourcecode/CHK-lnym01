@@ -5,13 +5,13 @@ import befaster.solutions.CHK.validator.SkuValidator;
 
 public class CheckoutSolution {
 
-    private SkuValidator skuListValidator;
-    private Calculator calculator;
+//    private SkuValidator skuListValidator;
+//    private Calculator calculator;
 
-    public CheckoutSolution(){
-        skuListValidator = new SkuValidator();
-        calculator = new Calculator();
-    }
+//    public CheckoutSolution(){
+//        skuListValidator = new SkuValidator();
+//        calculator = new Calculator();
+//    }
 
     public Integer checkout(final String skus) {
 
@@ -22,27 +22,39 @@ public class CheckoutSolution {
             return 0;
         }
 
-        String input = skus.toUpperCase();
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        int d = 0;
+
         for(int i = 0; i < skus.length(); i++){
-            if(input.charAt(i) == 'A'){
-                return 50;
+            if(skus.charAt(i) == 'A'){
+                a ++;
+                continue;
             }
-            if(input.charAt(i) == 'B'){
-                return 30;
+            if(skus.charAt(i) == 'B'){
+                b++;
+                continue;
             }
-            if(input.charAt(i) == 'C'){
-                return 20;
+            if(skus.charAt(i) == 'C'){
+                c++;
+                continue;
             }
-            if(input.charAt(i) == 'D'){
-                return 15;
+            if(skus.charAt(i) == 'D'){
+                d++;
+                continue;
             }
+            return -1;
         }
 
+        int total = 0;
 
+        total += ((a / 3) * 130) + ((a%3) * 50);
+        total += ((b / 2) * 45) + ((b%2) * 30);
+        total += c * 20;
+        total += d *15;
 
-
-
-        return -1;
+        return total;
 
 //        // split & validate
 //        List<String> splitSkus = Arrays.asList(StringUtils.split(skus, " "));
@@ -56,3 +68,4 @@ public class CheckoutSolution {
 //        return calculator.checkout(itemTotals);
     }
 }
+

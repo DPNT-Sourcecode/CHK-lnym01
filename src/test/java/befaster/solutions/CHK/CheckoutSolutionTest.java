@@ -55,5 +55,3 @@ public class CheckoutSolutionTest {
         assertThat(result, is(ILLEGAL_INPUT_RESULT));
     }
 }
-
-

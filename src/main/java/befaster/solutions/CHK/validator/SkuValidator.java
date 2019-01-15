@@ -4,8 +4,11 @@ import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class SkuValidator {
+
+    Pattern.compile("\\d+[ABCD]")
 
     private enum ItemCode {
         A, B, C, D
@@ -40,6 +43,7 @@ public class SkuValidator {
 
 
 }
+
 
 
 

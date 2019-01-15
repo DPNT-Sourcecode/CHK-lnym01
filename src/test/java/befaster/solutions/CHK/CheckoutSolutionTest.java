@@ -18,6 +18,31 @@ public class CheckoutSolutionTest {
     }
 
     @Test
+    public void null_input_returns_minus_one(){
+        // given:
+        String input = null;
+
+        // when:
+        Integer result = subject.checkout(input);
+
+        // then:
+        assertThat(result, is(ILLEGAL_INPUT_RESULT));
+
+    }
+    @Test
+    public void empty_input_returns_minus_one(){
+        // given:
+        String input = " ";
+
+        // when:
+        Integer result = subject.checkout(input);
+
+        // then:
+        assertThat(result, is(ILLEGAL_INPUT_RESULT));
+
+    }
+
+    @Test
     public void illegal_input_returns_minus_one(){
 
         // given:
@@ -30,4 +55,5 @@ public class CheckoutSolutionTest {
         assertThat(result, is(ILLEGAL_INPUT_RESULT));
     }
 }
+
 

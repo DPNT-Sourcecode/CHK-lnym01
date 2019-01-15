@@ -24,6 +24,10 @@ public class SumSolutionTest {
     @Test(expected=IllegalArgumentException.class)
     public void test_null_input_throws_illegal_argument_exception(){
         sum.compute(null, 1);
-
+    }
+    @Test(expected=IllegalArgumentException.class)
+    public void test_input_exceeding_range_constraints_throws_illegal_argument_exception(){
+        sum.compute(101, 1);
     }
 }
+

@@ -7,6 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 public class CheckoutSolution {
 
@@ -23,15 +24,17 @@ public class CheckoutSolution {
         if(StringUtils.isBlank(skus)){
             return 0;
         }
-        // split & validate
-        List<String> splitSkus = Arrays.asList(StringUtils.split(skus, " "));
-        if(! skuListValidator.validate(splitSkus)){
-            return -1;
-        }
-
-        // group items with the same code
-        Map<String,Integer> itemTotals = calculator.getItemCodeTotals(splitSkus);
-
-        return calculator.checkout(itemTotals);
+        Pattern valid = Pattern.compile("[ ABCDabcd]{0-1}")
+//        // split & validate
+//        List<String> splitSkus = Arrays.asList(StringUtils.split(skus, " "));
+//        if(! skuListValidator.validate(splitSkus)){
+//            return -1;
+//        }
+//
+//        // group items with the same code
+//        Map<String,Integer> itemTotals = calculator.getItemCodeTotals(splitSkus);
+//
+//        return calculator.checkout(itemTotals);
     }
 }
+

@@ -2,16 +2,16 @@ package befaster.solutions.CHK.model;
 
 public class Item {
 
-    private String id;
+    private String code;
 
     private int price;
 
-    public String getId() {
-        return id;
+    public String getCode() {
+        return code;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public int getPrice() {
@@ -22,3 +22,4 @@ public class Item {
         this.price = price;
     }
 }
+

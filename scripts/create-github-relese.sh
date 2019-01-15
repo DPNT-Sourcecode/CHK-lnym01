@@ -38,7 +38,7 @@ curl \
     -H "Accept: application/vnd.github.v3+json" \
     -X GET "https://api.github.com/repos/${TARGET_REPO}/releases/tags/${TAG_NAME}" |
     tee ./build/github-release.listing
-RELEASE_ID=`cat ${CURL_OUTPUT} | grep id | head -n 1 | tr -d " " | tr "," ":" | cut -d ":" -f 2`
+RELEASE_ID=`cat ${CURL_OUTPUT} | grep code | head -n 1 | tr -d " " | tr "," ":" | cut -d ":" -f 2`
 
 function uploadAsset() {
     local releaseId=$1

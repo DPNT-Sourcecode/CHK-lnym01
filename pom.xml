@@ -14,12 +14,12 @@
 
     <repositories>
         <repository>
-            <id>central</id>
+            <code>central</code>
             <name>Maven Central</name>
             <url>http://repo1.maven.org/maven2/</url>
         </repository>
         <repository>
-            <id>bintray-julianghionoiu-maven</id>
+            <code>bintray-julianghionoiu-maven</code>
             <name>bintray</name>
             <url>http://dl.bintray.com/julianghionoiu/maven</url>
         </repository>

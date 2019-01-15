@@ -27,6 +27,3 @@ public class SkuValidator {
         return true;
     }
 }
-
-
-

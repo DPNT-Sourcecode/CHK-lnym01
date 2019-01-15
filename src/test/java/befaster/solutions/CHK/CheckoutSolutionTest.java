@@ -8,8 +8,6 @@ import static org.hamcrest.Matchers.is;
 
 public class CheckoutSolutionTest {
 
-    private static final Integer ILLEGAL_INPUT_RESULT = -1;
-
     private CheckoutSolution subject;
 
     @Before
@@ -26,7 +24,7 @@ public class CheckoutSolutionTest {
         Integer result = subject.checkout(input);
 
         // then:
-        assertThat(result, is(ILLEGAL_INPUT_RESULT));
+        assertThat(result, is(-1));
 
     }
     @Test
@@ -38,7 +36,7 @@ public class CheckoutSolutionTest {
         Integer result = subject.checkout(input);
 
         // then:
-        assertThat(result, is(ILLEGAL_INPUT_RESULT));
+        assertThat(result, is(0));
 
     }
 
@@ -52,14 +50,14 @@ public class CheckoutSolutionTest {
         Integer result = subject.checkout(input);
 
         // then:
-        assertThat(result, is(ILLEGAL_INPUT_RESULT));
+        assertThat(result, is(-1));
     }
 
     @Test
     public void correct_input_returns_expected_total(){
 
         // given:
-        String input = "3A 2A 2B 1C";
+        String input = "3A 2A 2B C";
 
         // when:
         Integer result = subject.checkout(input);
@@ -68,3 +66,4 @@ public class CheckoutSolutionTest {
         assertThat(result, is(295));
     }
 }
+

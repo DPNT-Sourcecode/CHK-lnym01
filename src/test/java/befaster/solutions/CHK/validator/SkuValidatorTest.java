@@ -33,7 +33,7 @@ public class SkuValidatorTest {
     @Test
     public void valid_input_returns_true(){
         // given:
-        List<String> input = Arrays.asList("1A", "2B");
+        List<String> input = Arrays.asList("1A", "D", "2B");
 
         // when:
         boolean result = subject.validate(input);
@@ -42,3 +42,4 @@ public class SkuValidatorTest {
         assertThat(result, is(true));
     }
 }
+

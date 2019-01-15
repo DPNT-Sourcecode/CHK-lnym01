@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 public class SkuValidator {
 
-    Pattern skuPattern = Pattern.compile("\\d[ABCD]{1}");
+    Pattern skuPattern = Pattern.compile("\\d*[ABCD]{1}");
 
     public Boolean validate(List<String> input ){
 
@@ -27,4 +27,5 @@ public class SkuValidator {
         return true;
     }
 }
+
 

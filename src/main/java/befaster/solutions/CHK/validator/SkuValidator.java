@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 public class SkuValidator {
 
-    Pattern.compile("\\d+[ABCD]")
+    Pattern skuPattern = Pattern.compile("\\d+[ABCD]{1}");
 
     private enum ItemCode {
         A, B, C, D
@@ -16,25 +16,30 @@ public class SkuValidator {
 
     public Boolean validate(List<String> input ){
 
+        Pattern.com
+
         if(CollectionUtils.isEmpty(input)){
             // shouldn't happen...
             return false;
         }
 
         for(String sku: input) {
-            // is letters and numbers only
-            if(! StringUtils.isAlphanumeric(sku)){
-                return false;
-            }
-            // only last character should be a letter
-            char lastChar = sku.charAt(sku.length()-1);
-            if(lastChar < 'A' || lastChar > 'Z'){
-                return false;
-            }
-            String skuQuantifier = StringUtils.substring(sku, 0, sku.length());
-            if(StringUtils.is)
 
-            // last letter should be an ItemCode
+            
+
+//            // is letters and numbers only
+//            if(! StringUtils.isAlphanumeric(sku)){
+//                return false;
+//            }
+//            // only last character should be a letter
+//            char lastChar = sku.charAt(sku.length()-1);
+//            if(lastChar < 'A' || lastChar > 'Z'){
+//                return false;
+//            }
+//            String skuQuantifier = StringUtils.substring(sku, 0, sku.length());
+//            if(StringUtils.is)
+//
+//            // last letter should be an ItemCode
         }
 
 
@@ -43,10 +48,3 @@ public class SkuValidator {
 
 
 }
-
-
-
-
-
-
-

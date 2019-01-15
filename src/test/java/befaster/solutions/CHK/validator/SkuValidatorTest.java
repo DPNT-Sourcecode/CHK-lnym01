@@ -54,6 +54,3 @@ public class SkuValidatorTest {
         assertThat(result, is(true));
     }
 }
-
-
-

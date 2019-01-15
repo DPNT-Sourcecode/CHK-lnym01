@@ -2,25 +2,51 @@ package befaster.solutions.CHK.service;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class Calculator {
 
-    public int valueOf(String sku){
-        String itemCode = StringUtils.substring(sku, sku.length()-1);
-        int quantifier = Integer.parseInt(StringUtils.substringBefore(sku, itemCode));
+    public Map<String, Integer> getItemCodeTotals(List<String> splitSkus) {
 
-        switch(itemCode){
-            case "A":
-                return ((quantifier/3)*130) + ((quantifier %3) *50);
-            case "B":
-                return ((quantifier/2)*45) + ((quantifier%2)*30);
-            case "C":
-                return quantifier * 20;
-            case "D":
-                return quantifier * 15;
-            default:
-                // should never happen
-                return -1;
+        Map<String, Integer> skuQuantityTotals = new HashMap();
+
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        int d = 0;
+
+        for (String sku : splitSkus) {
+
+            String itemCode = StringUtils.substring(sku, sku.length() - 1).toUpperCase();
+            int quantifier = Integer.parseInt(StringUtils.substringBefore(sku, itemCode));
+
+            switch (itemCode) {
+                case "A":
+                    a += quantifier;
+                    break;
+                case "B":
+                    b += quantifier;
+                    break;
+                case "C":
+                    c += quantifier;
+                    break;
+                case "D":
+                    d += quantifier;
+                    break;
+                default:
+                    // should never happen
+                    break;
+            }
+
+
+            skuQuantityTotals.put("A", a);
+            skuQuantityTotals.put("B", b);
+            skuQuantityTotals.put("C", c);
+            skuQuantityTotals.put("D", d);
         }
-
+        return skuQuantityTotals;
     }
 }
+

@@ -14,6 +14,7 @@ public class CheckoutSolution {
 
     public CheckoutSolution(){
         skuListValidator = new SkuValidator();
+        calculator = new Calculator();
     }
 
     public Integer checkout(final String skus) {
@@ -27,14 +28,11 @@ public class CheckoutSolution {
             return -1;
         }
 
-        // TODO: group same item codes before calculation
+        // group items with the same code
+        calculator.getItemCodeTotals(splitSkus);
 
-        splitSkus.stream().map(sku -> calculator.valueOf(sku)).
-
-        return 0;   //TODO: 0 to differentiate between blank and regular execution for now
-
-//        throw new SolutionNotImplementedException();
+//        return splitSkus.stream().mapToInt(sku -> calculator.valueOf(sku)).sum();
+        return 0;
     }
-
-
 }
+

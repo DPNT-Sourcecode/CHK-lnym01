@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class Calculator {
 
-    public Map<String, Integer> getItemCodeTotals(List<String> splitSkus) {
+    public Map<String, Integer> getItemCodeTotals(final List<String> splitSkus) {
 
         Map<String, Integer> skuQuantityTotals = new HashMap();
 
@@ -48,5 +48,28 @@ public class Calculator {
         }
         return skuQuantityTotals;
     }
+
+    public Integer checkout(final Map<String, Integer> skuMap){
+
+        int total = 0;
+
+        int aCount = skuMap.get("A");
+        total += ((aCount / 3) * 130) + ((aCount%3) * 50);
+
+        int bCount = skuMap.get("B");
+        total += ((bCount / 2) * 45) + ((bCount%3) * 30);
+
+        int cCount = skuMap.get("C");
+        total += cCount * 20;
+
+        int dCount = skuMap.get("D");
+        total += dCount *15;
+
+        return total;
+
+    }
+
+
 }
+
 

@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -31,7 +32,24 @@ public class CalculatorTest {
 
         // then:
         assertThat(result.get("A"), is(5));
+    }
 
+    @Test
+    public void checkout_totals_correct_amount(){
+
+        // given:
+        Map<String, Integer> input = new HashMap<>();
+        input.put("A", 5);
+        input.put("B", 2);
+        input.put("C", 1);
+        input.put("D", 0);
+
+        // when:
+        Integer result = subject.checkout(input);
+
+        // then:
+        assertThat(result, is(295));
     }
 }
+
 

@@ -16,17 +16,18 @@ public class HelloSolutionTest {
     }
 
     @Test
-    public void hello_outputs_string(){
+    public void hello_outputs_friend_name(){
 
         //given:
-        String input = "ignored";
+        String input = "Simon";
 
         //when:
         String result = subject.hello(input);
 
         //then:
-        assertThat(result, is("Hello, World!"));
+        assertThat(result, is("Hello, Simon!"));
 
     }
 }
+
 

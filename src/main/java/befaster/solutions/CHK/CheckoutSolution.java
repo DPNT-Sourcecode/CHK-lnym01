@@ -21,7 +21,7 @@ public class CheckoutSolution {
     public Integer checkout(final String skus) {
 
         if(StringUtils.isBlank(skus)){
-            return -1;
+            return 0;
         }
         // split & validate
         List<String> splitSkus = Arrays.asList(StringUtils.split(skus, " "));
@@ -35,3 +35,4 @@ public class CheckoutSolution {
         return calculator.checkout(itemTotals);
     }
 }
+

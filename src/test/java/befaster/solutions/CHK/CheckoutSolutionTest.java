@@ -28,7 +28,7 @@ public class CheckoutSolutionTest {
 
     }
     @Test
-    public void empty_input_returns_minus_one(){
+    public void empty_input_returns_zero(){
         // given:
         String input = " ";
 
@@ -66,4 +66,5 @@ public class CheckoutSolutionTest {
         assertThat(result, is(295));
     }
 }
+
 

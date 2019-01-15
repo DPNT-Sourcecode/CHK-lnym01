@@ -20,7 +20,8 @@ public class Calculator {
         for (String sku : splitSkus) {
 
             String itemCode = StringUtils.substring(sku, sku.length() - 1).toUpperCase();
-            int quantifier = Integer.parseInt(StringUtils.substringBefore(sku, itemCode));
+            int quantifier = getQuantifier(sku, itemCode);
+
 
             switch (itemCode) {
                 case "A":
@@ -49,6 +50,15 @@ public class Calculator {
         return skuQuantityTotals;
     }
 
+    public int getQuantifier(String sku, String itemCode) {
+        String quantifierString = StringUtils.substringBefore(sku, itemCode);
+        int quantifier = 1;
+        if(!StringUtils.isEmpty(quantifierString)){
+            quantifier = Integer.parseInt(quantifierString);
+        }
+        return quantifier;
+    }
+
     public Integer checkout(final Map<String, Integer> skuMap){
 
         int total = 0;
@@ -71,5 +81,6 @@ public class Calculator {
 
 
 }
+
 
 

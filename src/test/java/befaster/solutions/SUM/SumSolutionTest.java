@@ -20,5 +20,12 @@ public class SumSolutionTest {
 
         assertThat(sum.compute(1, 1), equalTo(2));
     }
+
+    @Test(expected=IllegalArgumentException.class)
+    public void test_null_input_throws_illegal_argument_exception(){
+        sum.compute(null, 1);
+
+    }
 }
+
 

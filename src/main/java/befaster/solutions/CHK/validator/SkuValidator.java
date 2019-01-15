@@ -19,9 +19,16 @@ public class SkuValidator {
         }
 
         for(String sku: input) {
-            if(StringUtils.isAlphanumeric(sku)){
+            // is letters and numbers only
+            if(! StringUtils.isAlphanumeric(sku)){
                 return false;
             }
+            // only last character should be a letter
+            char lastChar = sku.charAt(sku.length()-1);
+            if(){
+
+            }
+            // last letter should be an ItemCode
         }
 
 
@@ -30,6 +37,7 @@ public class SkuValidator {
 
 
 }
+
 
 
 

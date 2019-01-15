@@ -33,7 +33,7 @@ public class SkuValidatorTest {
     @Test
     public void non_alphanumeric_sku_returns_false(){
         // given:
-        List<String> input = Arrays.asList("1A", "%%");
+        List<String> input = Arrays.asList("1A", "3%");
 
         // when:
         boolean result = subject.validate(input);
@@ -54,5 +54,6 @@ public class SkuValidatorTest {
         assertThat(result, is(true));
     }
 }
+
 
 

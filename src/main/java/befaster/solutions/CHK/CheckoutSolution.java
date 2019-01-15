@@ -22,20 +22,25 @@ public class CheckoutSolution {
             return 0;
         }
 
+        String input = skus.toUpperCase();
+        for(int i = 0; i < skus.length(); i++){
+            if(input.charAt(i) == 'A'){
+                return 50;
+            }
+            if(input.charAt(i) == 'B'){
+                return 30;
+            }
+            if(input.charAt(i) == 'C'){
+                return 20;
+            }
+            if(input.charAt(i) == 'D'){
+                return 15;
+            }
+        }
 
 
-        if(significantChar.equals("A")){
-            return 50;
-        }
-        if(significantChar.equals("B")){
-            return 30;
-        }
-        if(significantChar.equals("C")){
-            return 20;
-        }
-        if(significantChar.equals("D")){
-            return 15;
-        }
+
+
 
         return -1;
 
@@ -51,7 +56,3 @@ public class CheckoutSolution {
 //        return calculator.checkout(itemTotals);
     }
 }
-
-
-
-

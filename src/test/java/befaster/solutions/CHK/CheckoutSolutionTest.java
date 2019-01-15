@@ -15,28 +15,6 @@ public class CheckoutSolutionTest {
         subject = new CheckoutSolution();
     }
 
-    @Test
-    public void null_input_returns_minus_one(){
-        // given:
-        String input = null;
-
-        // when:
-        Integer result = subject.checkout(input);
-
-        // then:
-        assertThat(result, is(-1));
-    }
-    @Test
-    public void null_input_returns_minus_one(){
-        // given:
-        String input = null;
-
-        // when:
-        Integer result = subject.checkout(input);
-
-        // then:
-        assertThat(result, is(-1));
-    }
 
 //    @Test
 //    public void null_input_returns_minus_one(){
@@ -89,5 +67,3 @@ public class CheckoutSolutionTest {
 //        assertThat(result, is(295));
 //    }
 }
-
-

@@ -47,14 +47,7 @@ public class CheckoutSolution {
             return -1;
         }
 
-        int total = 0;
-
-        total += ((a / 3) * 130) + ((a%3) * 50);
-        total += ((b / 2) * 45) + ((b%2) * 30);
-        total += c * 20;
-        total += d *15;
-
-        return total;
+        return getTotal(a, b, c, d);
 
 //        // split & validate
 //        List<String> splitSkus = Arrays.asList(StringUtils.split(skus, " "));
@@ -67,5 +60,18 @@ public class CheckoutSolution {
 //
 //        return calculator.checkout(itemTotals);
     }
+
+    private int getTotal(final int a, final int b, final int c, final int d) {
+
+        int total = 0;
+
+        total += ((a / 3) * 130) + ((a%3) * 50);
+        total += ((b / 2) * 45) + ((b%2) * 30);
+        total += c * 20;
+        total += d *15;
+
+        return total;
+    }
 }
+
 

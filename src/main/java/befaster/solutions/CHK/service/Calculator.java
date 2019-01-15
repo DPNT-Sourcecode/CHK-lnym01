@@ -8,13 +8,7 @@ import java.util.Map;
 
 public class Calculator {
 
-    private static final String A = "a";
-    private static final String B = "b";
-    private static final String C = "c";
-    private static final String D = "d";
-
     public Map<String, Integer> getItemCodeTotals(final List<String> splitSkus) {
-
 
         Map<String, Integer> skuQuantityTotals = new HashMap();
 
@@ -29,16 +23,16 @@ public class Calculator {
             int quantifier = Integer.parseInt(StringUtils.substringBefore(sku, itemCode));
 
             switch (itemCode) {
-                case A:
+                case "A":
                     a += quantifier;
                     break;
-                case B:
+                case "B":
                     b += quantifier;
                     break;
-                case C:
+                case "C":
                     c += quantifier;
                     break;
-                case D:
+                case "D":
                     d += quantifier;
                     break;
                 default:
@@ -47,10 +41,10 @@ public class Calculator {
             }
 
 
-            skuQuantityTotals.put(A, a);
-            skuQuantityTotals.put(B, b);
-            skuQuantityTotals.put(C, c);
-            skuQuantityTotals.put(D, d);
+            skuQuantityTotals.put("A", a);
+            skuQuantityTotals.put("B", b);
+            skuQuantityTotals.put("C", c);
+            skuQuantityTotals.put("D", d);
         }
         return skuQuantityTotals;
     }
@@ -59,16 +53,16 @@ public class Calculator {
 
         int total = 0;
 
-        int aCount = skuMap.get(A);
+        int aCount = skuMap.get("A");
         total += ((aCount / 3) * 130) + ((aCount%3) * 50);
 
-        int bCount = skuMap.get(B);
+        int bCount = skuMap.get("B");
         total += ((bCount / 2) * 45) + ((bCount%2) * 30);
 
-        int cCount = skuMap.get(C);
+        int cCount = skuMap.get("C");
         total += cCount * 20;
 
-        int dCount = skuMap.get(D);
+        int dCount = skuMap.get("D");
         total += dCount *15;
 
         return total;
@@ -77,3 +71,4 @@ public class Calculator {
 
 
 }
+

@@ -6,6 +6,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 public class CheckoutSolution {
 
@@ -29,10 +30,10 @@ public class CheckoutSolution {
         }
 
         // group items with the same code
-        calculator.getItemCodeTotals(splitSkus);
+        Map<String,Integer> itemTotals = calculator.getItemCodeTotals(splitSkus);
 
-//        return splitSkus.stream().mapToInt(sku -> calculator.valueOf(sku)).sum();
-        return 0;
+        return calculator.checkout(itemTotals);
     }
 }
+
 

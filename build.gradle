@@ -20,6 +20,7 @@ dependencies {
     compile 'com.mashape.unirest:unirest-java:1.4.9'
     compile 'com.google.guava:guava:18.0'
     compile 'org.apache.commons:commons-lang3:3.8.1'
+    compile 'org.apache.commons:commons-collections4:4.2'
 
 
     testCompile ('junit:junit:4.12') {
@@ -66,3 +67,4 @@ jacocoTestReport {
         html.destination file("${buildDir}/jacocoHtml")
     }
 }
+

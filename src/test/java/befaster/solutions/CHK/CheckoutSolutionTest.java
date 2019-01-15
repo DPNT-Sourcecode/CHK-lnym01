@@ -54,4 +54,18 @@ public class CheckoutSolutionTest {
         // then:
         assertThat(result, is(ILLEGAL_INPUT_RESULT));
     }
+
+    @Test
+    public void correct_input_returns_expected_total(){
+
+        // given:
+        String input = "3A 2A 2B 1C";
+
+        // when:
+        Integer result = subject.checkout(input);
+
+        // then:
+        assertThat(result, is(295));
+    }
 }
+

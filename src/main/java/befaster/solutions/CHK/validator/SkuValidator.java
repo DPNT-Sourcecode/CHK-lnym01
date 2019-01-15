@@ -6,8 +6,8 @@ import java.util.List;
 
 public class SkuValidator {
 
-    private Enum itemCode {
-
+    private enum itemCode {
+        A, B, C, D
     }
 
     public boolean validate(List<String> input ){
@@ -17,6 +17,8 @@ public class SkuValidator {
             return false;
         }
 
+        
+
         input.stream().
 
         return false;   //TODO
@@ -24,5 +26,6 @@ public class SkuValidator {
 
 
 }
+
 
 

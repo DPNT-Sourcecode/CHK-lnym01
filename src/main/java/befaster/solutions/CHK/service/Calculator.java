@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Deprecated
 public class Calculator {
 
     public Map<String, Integer> getItemCodeTotals(final List<String> splitSkus) {
@@ -81,3 +82,4 @@ public class Calculator {
 
 
 }
+

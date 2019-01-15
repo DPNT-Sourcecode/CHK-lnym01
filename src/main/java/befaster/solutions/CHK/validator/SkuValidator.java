@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
 
+@Deprecated
 public class SkuValidator {
 
     Pattern skuPattern = Pattern.compile("\\d*[ABCD]{1}");
@@ -27,3 +28,4 @@ public class SkuValidator {
         return true;
     }
 }
+

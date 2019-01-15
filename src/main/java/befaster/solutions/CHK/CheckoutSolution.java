@@ -37,7 +37,7 @@ public class CheckoutSolution {
             return 15;
         }
 
-        return 0;
+        return -1;
 
 //        // split & validate
 //        List<String> splitSkus = Arrays.asList(StringUtils.split(skus, " "));
@@ -51,5 +51,6 @@ public class CheckoutSolution {
 //        return calculator.checkout(itemTotals);
     }
 }
+
 
 

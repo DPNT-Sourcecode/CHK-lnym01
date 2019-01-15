@@ -66,5 +66,3 @@ public class CheckoutSolutionTest {
         assertThat(result, is(295));
     }
 }
-
-

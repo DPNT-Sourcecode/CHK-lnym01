@@ -8,7 +8,12 @@ public class Calculator {
         String itemCode = StringUtils.substring(sku, sku.length()-1);
         int quantifier = Integer.parseInt(StringUtils.substringBefore(sku, itemCode));
 
+        switch(itemCode){
+            "A": 
+        }
+
         return 0;   // todo
     }
 }
+
 

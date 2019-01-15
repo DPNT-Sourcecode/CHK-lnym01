@@ -2,12 +2,6 @@ package befaster.solutions.CHK;
 
 import befaster.solutions.CHK.service.Calculator;
 import befaster.solutions.CHK.validator.SkuValidator;
-import org.apache.commons.lang3.StringUtils;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.regex.Pattern;
 
 public class CheckoutSolution {
 
@@ -21,10 +15,30 @@ public class CheckoutSolution {
 
     public Integer checkout(final String skus) {
 
-        if(StringUtils.isBlank(skus)){
+        if(skus == null){
+            return -1;
+        }
+        if(skus.length()==0){
             return 0;
         }
-        Pattern valid = Pattern.compile("[ ABCDabcd]{0-1}")
+
+        String significantChar = skus.substring(0,1).toUpperCase();
+
+        if(significantChar.equals("A")){
+            return 50;
+        }
+        if(significantChar.equals("B")){
+            return 30;
+        }
+        if(significantChar.equals("C")){
+            return 20;
+        }
+        if(significantChar.equals("D")){
+            return 15;
+        }
+
+        return 0;
+
 //        // split & validate
 //        List<String> splitSkus = Arrays.asList(StringUtils.split(skus, " "));
 //        if(! skuListValidator.validate(splitSkus)){
@@ -37,4 +51,5 @@ public class CheckoutSolution {
 //        return calculator.checkout(itemTotals);
     }
 }
+
 
